@@ -28,6 +28,7 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hashie (3.6.0)
+    htmlcompressor (0.2.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     kramdown (2.5.1)
@@ -73,6 +74,9 @@ GEM
       toml
       uglifier (~> 3.0)
       webrick
+    middleman-minify-html (3.4.1)
+      htmlcompressor (~> 0.2.0)
+      middleman-core (>= 3.2)
     minitest (5.25.4)
     padrino-helpers (0.15.3)
       i18n (>= 0.6.7, < 2)
@@ -109,6 +113,7 @@ PLATFORMS
 DEPENDENCIES
   middleman (~> 4.5)
   middleman-blog (~> 4.0)
+  middleman-minify-html
   terser (~> 1.1)
   tzinfo-data
   wdm (~> 0.1)

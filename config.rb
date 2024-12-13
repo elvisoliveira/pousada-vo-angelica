@@ -17,8 +17,11 @@ activate :blog do |blog|
 end
 
 configure :build do
-  activate :relative_assets
-  set :relative_links, true
+  activate :minify_html do |html|
+    html.remove_multi_spaces = true
+    html.remove_intertag_spaces = true
+    html.remove_comments = true
+  end
   set :http_prefix, ENV['BASE_URL'] || "/"
 end
 
