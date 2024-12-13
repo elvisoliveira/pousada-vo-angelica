@@ -1,0 +1,29 @@
+<h1>Fotos</h1>
+<table>
+  <tbody>
+    <% photos.each_slice(4) do |photo_row| %>
+      <tr>
+        <% photo_row.each do |photo| %>
+          <td valign="top">
+            <% link_to "/images/gallery/#{photo.id}", :rel => 'lightbox' do %>
+              <%= image_tag "gallery/#{photo.id}", :width => '150' %>
+            <% end %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+    <tr>
+      <td colspan="4">
+        <% if current != 1 %>
+          <span><%= link_to 'Anterior', "/fotos_#{current - 1}.html" %></span>
+        <% end %>
+        <% (1..(total)).to_a.each do |page_num| %>
+          <span class="<%= 'active' if current == page_num %>"><%= link_to page_num, "/fotos_#{page_num}.html" %></span>
+        <% end %>
+        <% if current < total %>
+          <span><%= link_to 'Próximo', "/fotos_#{current + 1}.html" %></span>
+        <% end %>
+      </td>
+    </tr>
+  </tbody>
+</table>

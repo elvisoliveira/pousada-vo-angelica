@@ -1,0 +1,30 @@
+<h1>Contato</h1>
+<p><%= config[:contact] %></p>
+<p><%= config[:address] %></p>
+<form action="#" method="POST">
+  <table border="0" cellspacing="10">
+    <tbody>
+      <tr>
+        <td>Nome</td>
+        <td><input name="nome" type="text" /></td>
+      </tr>
+      <tr>
+        <td>E-Mail</td>
+        <td><input name="email" type="text" /></td>
+      </tr>
+      <tr>
+        <td height="323">Mensagem</td>
+        <td align="left" valign="top">
+          <textarea name="comentarios" cols="55" rows="23"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <input name="submit" type="submit" value="Enviar">
+          <input name="Reset" type="reset" value="Limpar">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= config[:language] %>">
+  <head>
+    <title><%= config[:name] %></title>
+    <%= stylesheet_link_tag "style" %>
+    <meta name="reply-to" content="<%= config[:email] %>">
+    <meta http-equiv="content-language" content="<%= config[:language] %>">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="<%= config[:author] %>">
+    <meta name="keywords" content="<%= config[:keywords] %>">
+    <meta name="description" content="<%= config[:description] %>">
+  </head>
+  <body>
+    <div id="todo">
+      <%= partial "partials/avatar" %>
+      <div id="corpo">
+        <%= yield %>
+      </div>
+    </div>
+    <%= partial "partials/footer" %>
+    <!-- the original lightbox version isn't available on monern cdn's -->
+    <script src=" https://cdn.jsdelivr.net/npm/lightbox2@2.11.5/dist/js/lightbox-plus-jquery.min.js "></script>
+    <link href=" https://cdn.jsdelivr.net/npm/lightbox2@2.11.5/dist/css/lightbox.min.css " rel="stylesheet">
+  </body>
+</html>

@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+span.active {
+  background-color: #C2D49A;
+}
+
+html,
+body {
+  background-color: #C2D49A;
+  height: 100%;
+}
+
+div#todo {
+  width: 100%;
+  height: calc(100% - 40px);
+  min-height: 500px;
+  float: left;
+}
+
+div#avatar {
+  float: left;
+  width: 100%;
+  background-image: url("../images/logo.gif");
+  background-repeat: no-repeat;
+  background-size: 160px;
+  background-position: center 1px;
+  image-rendering: crisp-edges;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+div#pousada {
+  float: left;
+  width: 50%;
+
+  ul {
+    float: right;
+    margin-right: 80px;
+
+    li {
+      float: right;
+      margin-right: 29px;
+    }
+  }
+}
+
+div#reservas {
+  float: right;
+  width: 50%;
+
+  ul {
+    float: left;
+    margin-left: 80px;
+
+    li {
+      float: left;
+      margin-left: 14px;
+    }
+  }
+}
+
+div#avatar>div {
+  margin: 35px 0;
+
+  ul {
+    width: calc(100% - 80px);
+    background-color: #FFF;
+
+    li {
+      list-style: none;
+
+      a {
+        line-height: 62px;
+      }
+    }
+  }
+}
+
+div#corpo,
+div#footer {
+  background-color: #FFF;
+  float: left;
+  left: 50%;
+  position: relative;
+  margin-left: -335px;
+}
+
+div#corpo {
+  width: 610px;
+  height: calc(100% - 260px);
+  padding: 30px;
+  overflow: auto;
+
+  p,
+  h1,
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  li {
+    list-style: square inside;
+  }
+}
+
+div#footer {
+  width: 610px;
+  padding: 10px 30px;
+
+  span.left {
+    float: left;
+  }
+
+  span.right {
+    float: right;
+  }
+}
